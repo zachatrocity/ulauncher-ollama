@@ -53,7 +53,7 @@ class OllamaExtension(Extension):
         data = {
             "model": event['model'],
             "prompt": event['query'],
-            "system": "You are an inline assitant, keep your responses short and sweet.",
+            "system": self.preferences['ollama_system_prompt'],
             "stream": False
         }
 
@@ -87,7 +87,7 @@ class ItemEnterEventListener(EventListener):
         return RenderResultListAction(
             [
                 ExtensionResultItem(
-                    icon="images/ollama.png", name="Ollama says..", description=response['response'], on_enter=CopyToClipboardAction()
+                    icon="images/ollama.png", name="Ollama says..", description=response['response'], on_enter=CopyToClipboardAction(response['response'])
                 )
             ]
         )

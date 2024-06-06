@@ -30,6 +30,13 @@
         "default_value": "llama3:8b"
       },
       {
+        "id": "ollama_system_prompt",
+        "type": "text",
+        "name": "System Prompt",
+        "description": "Provide a system prompt to overwrite what is in your particular modelfile",
+        "default_value": "You are an inline assitant, keep your responses short and sweet."
+      },
+      {
         "id": "ollama_headers",
         "type": "text",
         "name": "Ollama Headers",
