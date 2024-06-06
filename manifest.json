@@ -1,0 +1,41 @@
+{
+    "required_api_version": "2",
+    "name": "Ollama",
+    "description": "A ulauncher extension allowing you to query and interact with an Ollama instance",
+    "developer_name": "Zach Russell",
+    "icon": "images/ollama.png",
+    "options": {
+      "query_debounce": 0.1
+    },
+    "preferences": [
+      {
+        "id": "ollama_kw",
+        "type": "keyword",
+        "name": "Ollama",
+        "description": "Keyword to trigger the ollama extension",
+        "default_value": "ai"
+      },
+      {
+        "id": "ollama_host",
+        "type": "text",
+        "name": "Ollama Host",
+        "description": "Ollama host to connect to",
+        "default_value": "https://your.ollama.url"
+      },
+      {
+        "id": "ollama_default_model",
+        "type": "text",
+        "name": "Default Model",
+        "description": "Default model to use when communicating with ollama",
+        "default_value": "llama3:8b"
+      },
+      {
+        "id": "ollama_headers",
+        "type": "text",
+        "name": "Ollama Headers",
+        "description": "Optional Headers to be passed on every ollama api request. Comma separated for multiple values.",
+        "default_value": ""
+      }
+    ]
+  }
+  
